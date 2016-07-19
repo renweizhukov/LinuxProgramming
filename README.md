@@ -17,29 +17,29 @@ https://robots.thoughtbot.com/the-magic-behind-configure-make-make-install
 
 1. Generate Configure and Makefile.in.
 
-```bash
-$ aclocal
-$ autoconf
-$ automake --add-missing
-```
+  ```bash
+  $ aclocal
+  $ autoconf
+  $ automake --add-missing
+  ```
 
 2. Distribute the program.
 
-```bash
-$ ./configure
-$ make dist
-``` 
+  ```bash
+  $ ./configure
+  $ make dist
+  ``` 
 
-To test the distribution,
+  To test the distribution,
 
-```bash
-$ make distcheck
-```
+  ```bash
+  $ make distcheck
+  ```
 
 3. Build the program main.c and install the binary helloworld.
 
-```bash
-$ ./configure
-$ make
-$ make install
-```
+  ```bash
+  $ ./configure
+  $ make
+  $ make install
+  ```
