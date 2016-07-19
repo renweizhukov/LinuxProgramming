@@ -1,3 +1,21 @@
+# configure-make-example
+helloworld
+helloworld*.tar.gz
+aclocal.m4
+*.cache
+compile
+depcomp
+missing
+config.*
+configure
+install-sh
+configure-make-example/Makefile
+Makefile.am
+.deps/
+
+# makefile-example
+hello
+
 # Compiled Object files
 *.slo
 *.lo
