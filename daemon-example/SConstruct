@@ -1,0 +1,4 @@
+env = Environment()
+env.Program(target='syslog_example', source=['syslog_example.c'])
+
+env.Program(target='daemon-example', source=['daemon_example.c'])
