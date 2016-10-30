@@ -23,7 +23,7 @@ config.*
 configure
 install-sh
 configure-make-example/Makefile
-Makefile.am
+Makefile.in
 .deps/
 
 # makefile-example

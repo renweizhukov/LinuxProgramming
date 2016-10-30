@@ -36,12 +36,45 @@ https://robots.thoughtbot.com/the-magic-behind-configure-make-make-install
   $ make distcheck
   ```
 
-3. Build the program main.c and install the binary helloworld.
+3. Build the program main.cpp and install the binary helloworld.
 
   ```bash
   $ ./configure
   $ make
   $ make install
+  ```
+
+Note that we experiment four different ways of printing a string immediately to stdout without buffering, where three of them are borrowed from http://stackoverflow.com/questions/1716296/why-does-printf-not-flush-after-the-call-unless-a-newline-is-in-the-format-strin.
+
+* Use fprintf to print to stderr.
+
+  ```C++
+  fprintf(stderr, "Print to stderr via fprintf.\n");
+  ```
+
+* Use buffered printf and then use fflush to flush stdout.
+
+  ```C++
+  printf("Buffered printf, will be flushed.\n");
+  fflush(stdout);
+  ```
+
+* Use endl to flush stdout by cout.
+
+  ```C++
+  cout << "Use endl to flush stdout by cout." << endl;
+  ```
+
+* Use setbuf to disable stdout buffering.
+
+  ```C++
+  printf("Disable buffered printf.\n");
+  ```
+
+To test the above four methods of unbuffered stdout, simply run the python script subprocessTest.py.
+
+  ```bash
+  ./subprocessTest.py
   ```
 
 ## Daemon example
