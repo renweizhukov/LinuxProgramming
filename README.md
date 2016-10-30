@@ -68,7 +68,7 @@ Note that we experiment four different ways of printing a string immediately to 
 * Use setbuf to disable stdout buffering.
 
   ```C++
-  printf("Disable buffered printf.\n");
+  setbuf(stdout, NULL);
   ```
 
 To test the above four methods of unbuffered stdout, simply run the python script subprocessTest.py.
